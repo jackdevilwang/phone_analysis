@@ -1,5 +1,8 @@
 package com.phone.analystic.modle.base;
 
+import com.phone.common.GlobalConstants;
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
@@ -26,9 +29,20 @@ public class BrowserDimension extends BaseDimension{
     }
 
     public BrowserDimension(int id, String browserName, String browserVersion) {
+        this(browserName,browserVersion);
         this.id = id;
-        this.browserName = browserName;
-        this.browserVersion = browserVersion;
+    }
+
+
+    public static BrowserDimension getInstance(String browserName, String browserVersion) {
+        if (StringUtils.isEmpty(browserName)) {
+            browserName = browserVersion = GlobalConstants.DEFAULT_VALUE;
+        }
+        if (StringUtils.isEmpty(browserVersion)) {
+            browserVersion = GlobalConstants.DEFAULT_VALUE;
+        }
+
+        return new BrowserDimension(browserName,browserVersion);
     }
 
     @Override

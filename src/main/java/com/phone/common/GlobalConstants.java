@@ -2,7 +2,7 @@ package com.phone.common;
 
 public class GlobalConstants {
 
-    public static final String RUNNING_DATE = "running_date"; //
+    public static final String RUNNING_DATE = "running_date";
 
     public static final String DEFAULT_VALUE = "unknown";
 
@@ -16,7 +16,7 @@ public class GlobalConstants {
 
     public static final String PASSWORD = "root";
 
-    public static final String WRITTER_PREFIX = "writer_";
+    public static final String WRITTER_PREFIX = "writter_";
 
     public static final int BATCH_NUMBER = 50;
 

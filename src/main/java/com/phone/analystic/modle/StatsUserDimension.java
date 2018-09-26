@@ -21,14 +21,6 @@ public class StatsUserDimension extends StatsBaseDimension{
         this.browserDimension = browserDimension;
     }
 
-    public static StatsUserDimension clone(StatsUserDimension dimension) {
-        BrowserDimension browserDimension = new BrowserDimension(dimension.browserDimension.getBrowserName(),
-                dimension.browserDimension.getBrowserVersion());
-        StatsCommonDimension statsCommonDimension = StatsCommonDimension.clone(dimension.statsCommonDimension);
-        return new StatsUserDimension(statsCommonDimension,browserDimension);
-
-    }
-
     @Override
     public int hashCode() {
         return Objects.hash(browserDimension, statsCommonDimension);
@@ -68,6 +60,17 @@ public class StatsUserDimension extends StatsBaseDimension{
         this.statsCommonDimension.readFields(in);
     }
 
+//    /**
+//     * 克隆当前对象的实例
+//     * @param dimension
+//     * @return
+//     */
+//    public static StatsUserDimension clone(StatsUserDimension dimension){
+//        BrowserDimension browserDimension = new BrowserDimension(dimension.browserDimension.getBrowserName(),
+//                dimension.browserDimension.getBrowserVersion());
+//        StatsCommonDimension statsCommonDimension = StatsCommonDimension.clone(dimension.statsCommonDimension);
+//        return new StatsUserDimension(statsCommonDimension,browserDimension);
+//    }
 
 
     public StatsCommonDimension getStatsCommonDimension() {

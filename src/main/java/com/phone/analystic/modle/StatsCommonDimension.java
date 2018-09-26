@@ -40,16 +40,16 @@ public class StatsCommonDimension extends StatsBaseDimension {
 
     }
 
-    public static  StatsCommonDimension clone(StatsCommonDimension dimension){
-        PlatformDimension platformDimension = new PlatformDimension(dimension.
-                platformDimension.getPlatformName());
-        KpiDimension kpiDiemension = new KpiDimension(dimension.kpiDimension.getKpiName());
-        DateDimension dateDimension = new DateDimension(dimension.dateDimension.getYear(),
-                dimension.dateDimension.getSeason(),dimension.dateDimension.getMonth(),
-                dimension.dateDimension.getWeek(),dimension.dateDimension.getDay(),
-                dimension.dateDimension.getType(),dimension.dateDimension.getCalendar());
-        return new StatsCommonDimension(dateDimension,platformDimension,kpiDiemension);
-    }
+//    public static  StatsCommonDimension clone(StatsCommonDimension dimension){
+//        PlatformDimension platformDimension = new PlatformDimension(dimension.
+//                platformDimension.getPlatformName());
+//        KpiDimension kpiDiemension = new KpiDimension(dimension.kpiDimension.getKpiName());
+//        DateDimension dateDimension = new DateDimension(dimension.dateDimension.getYear(),
+//                dimension.dateDimension.getSeason(),dimension.dateDimension.getMonth(),
+//                dimension.dateDimension.getWeek(),dimension.dateDimension.getDay(),
+//                dimension.dateDimension.getType(),dimension.dateDimension.getCalendar());
+//        return new StatsCommonDimension(dateDimension,platformDimension,kpiDiemension);
+//    }
 
     @Override
     public int hashCode() {

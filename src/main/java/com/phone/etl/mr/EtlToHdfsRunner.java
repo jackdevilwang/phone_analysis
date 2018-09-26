@@ -39,7 +39,7 @@ public class EtlToHdfsRunner implements Tool {
     }
 
     public void setConf(Configuration conf) {
-//        this.conf = HBaseConfiguration.createClusterConf();
+
         this.conf = conf;
     }
 

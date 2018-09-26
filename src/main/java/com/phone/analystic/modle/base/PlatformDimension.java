@@ -26,6 +26,14 @@ public class PlatformDimension extends BaseDimension{
         this.id = id;
     }
 
+    public static PlatformDimension getInstance(String platformName) {
+
+        String pl = StringUtils.isEmpty(platformName) ? GlobalConstants.DEFAULT_VALUE : platformName;
+
+        return new PlatformDimension(pl);
+    }
+
+
     @Override
     public void write(DataOutput out) throws IOException {
         out.writeInt(this.id);
